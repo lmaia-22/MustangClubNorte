@@ -1614,7 +1614,7 @@ summary:focus::after {
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0 0 0 5px rebeccapurple;
+  box-shadow: 0 0 0 5px #ffc451;
 }
 
 summary::-webkit-details-marker {
@@ -1622,7 +1622,7 @@ summary::-webkit-details-marker {
 }
 
 .control-icon {
-  fill: rebeccapurple;
+  fill: #ffc451;
   transition: .3s ease;
   pointer-events: none;
 }
