@@ -10,7 +10,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gill Sans Extrabold", sans-serif;
+  line-height: 2.0;
   color: #444444;
 }
 
@@ -107,12 +108,25 @@ h6 {
   }
 }
 
+#backgroundImage {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
+  }
+  #backgroundImage {
+    background-position: center;
+    background-size: cover;
   }
 }
 
