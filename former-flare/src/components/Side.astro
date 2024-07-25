@@ -1,0 +1,34 @@
+---
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+
+const images = [
+  { src: '/assetes/prtfolio-1.jpg', alt: 'Image 1' },
+  { src: '/assetes/prtfolio-2.jpg', alt: 'Image 2' },
+  { src: '/assetes/prtfolio-3.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-4.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-5.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-6.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-7.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-8.jpg', alt: 'Image 2' },
+  { src: '/assetes/prtfolio-9.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-10.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-11.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-12.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-13.jpg', alt: 'Image 3' },
+  { src: '/assetes/prtfolio-14.jpg', alt: 'Image 3' },
+];
+---
+
+<Carousel orientation="vertical" client:load>
+  <CarouselContent className="-ml-2 md:-ml-4" client:load>
+  {images.map((image) => (
+    <CarouselItem className="pl-2 md:pl-4" client:load>
+      <img src={image.src} alt={image.alt} />
+    </CarouselItem>
+  ))}
+  </CarouselContent>
+</Carousel>

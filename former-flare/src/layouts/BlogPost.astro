@@ -4,6 +4,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { InteractiveCarousel } from '../components/sideCarousel';
+import '@/styles/globals.css'
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -51,34 +53,73 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			.content {
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			th {
+				vertical-align: top;
+				margin: 5%;
+			}
+			.carousel-container {
+				display: flex;
+				justify-content: center;
+			}
 		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+			<div class="content">
+				<table>
+					<tr>
+						<th>
+							<div class="carousel-container">
+								<InteractiveCarousel client:load />
+							</div>
+						</th>
+						<th>
+							<article>
+								<div class="hero-image">
+									{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+								</div>
+								<div class="prose">
+									<div class="title">
+										<div class="date">
+											<FormattedDate date={pubDate} />
+											{
+												updatedDate && (
+													<div class="last-updated-on">
+														Last updated on <FormattedDate date={updatedDate} />
+													</div>
+												)
+											}
+										</div>
+										<h1>{title}</h1>
+										<hr />
 									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
-					<slot />
-				</div>
-			</article>
+									<slot />
+								</div>
+							</article>
+						</th>
+						<th>
+							<div class="carousel-container">
+								<InteractiveCarousel client:load />
+							</div>
+						</th>
+					</tr>
+				</table>
+			</div>
 		</main>
 		<Footer />
 	</body>
