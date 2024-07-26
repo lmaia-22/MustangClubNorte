@@ -85,13 +85,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<tr>
 						<th>
 							<div class="carousel-container">
-								<InteractiveCarousel client:load />
+								<InteractiveCarousel nImages={5} startImage={10} client:load />
 							</div>
 						</th>
 						<th>
 							<article>
 								<div class="hero-image">
-									{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+									{heroImage && <img width={700} height={210} src={heroImage} alt="" />}
 								</div>
 								<div class="prose">
 									<div class="title">
@@ -114,7 +114,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						</th>
 						<th>
 							<div class="carousel-container">
-								<InteractiveCarousel client:load />
+								<InteractiveCarousel nImages={5} startImage={0} client:load />
 							</div>
 						</th>
 					</tr>

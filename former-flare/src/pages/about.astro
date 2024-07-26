@@ -6,27 +6,44 @@ import Layout from '../layouts/BlogPost.astro';
 	title="Sobre nós"
 	description="Lorem ipsum dolor sit amet"
 	pubDate={new Date('May 08 2024')}
-	heroImage="/blog-placeholder-about.jpg"
+	heroImage="/src/assets/logo_no_bk.png"
 >
-	<p>
-		Somos um clube de Fords Mustangs do Norte de Portugal
+	<p class="center-text">
+		Somos 4 apaixonados pelo ford mustang e a sua historia e decidimos criar um clube de Fords Mustangs do Norte de Portugal
 	</p>
+	<hr />
 	<h3>A Nossa Missão</h3>
-	<ul>
+	<ul class="center-text">
 		<li><i class="ri-check-double-line"></i> Unir entusiastas de Mustangs através de eventos e passeios</li>
 		<li><i class="ri-check-double-line"></i> Proporcionar momentos de pura adrenalina e convívio.</li>
 		<li><i class="ri-check-double-line"></i> Oferecer uma plataforma para compartilhar conhecimentos e experiências</li>
 	</ul>
+	<hr />
 	<h3 class="mt-3">O Que Fazemos</h3>
-	<p class="fst-italic">
+	<p class="fst-italic center-text">
 	  Organizamos regularmente eventos e passeios que são a verdadeira expressão de nossa paixão por Mustangs. 
 	  Desde encontros casuais a eventos mais elaborados, cada ocasião é uma oportunidade para os membros mostrarem seus carros, trocarem experiências e criar memórias duradouras. 
 	  Nossos eventos são também uma chance para admirar a evolução destes carros espetaculares ao longo dos anos e ver de perto modelos clássicos e modernos.
 	</p>
+	<hr />
 	<h3>Junte-se a Nós</h3>
-	<p class="fst-italic">
+	<p class="fst-italic center-text">
 	Se você possui um Mustang e está no Norte de Portugal, venha fazer parte do nosso grupo! 
 	Não importa se o seu Mustang é um clássico restaurado ou um modelo mais recente, o que nos une é a paixão por este carro extraordinário. 
 	Ao se juntar a nós, você terá a oportunidade de participar de todos os nossos eventos, além de ter acesso a um grupo de apoio entusiasta para qualquer necessidade ou dúvida relacionada ao seu Mustang.            
 	</p>
 </Layout>
+
+
+<style>
+	.center-text {
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	h3 {
+		margin: 0 0 0.5em 0;
+		padding: 1em 0;
+		text-align: center;
+		line-height: 1;
+	}
+</style>
