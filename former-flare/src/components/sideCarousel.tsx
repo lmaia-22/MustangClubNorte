@@ -28,6 +28,9 @@ import Autoplay from "embla-carousel-autoplay"
     { src: '/src/assets/portfolio/portfolio-17.jpg', alt: 'Mustang 17' },
     { src: '/src/assets/portfolio/portfolio-18.jpg', alt: 'Mustang 18' },
     { src: '/src/assets/portfolio/portfolio-19.jpg', alt: 'Mustang 19' },
+    { src: '/src/assets/portfolio/portfolio-20.jpg', alt: 'Mustang 20' },
+    { src: '/src/assets/portfolio/portfolio-21.jpg', alt: 'Mustang 21' },
+    { src: '/src/assets/portfolio/portfolio-22.jpg', alt: 'Mustang 22' },
   ];
   interface InteractiveCarouselProps {
     nImages: number;

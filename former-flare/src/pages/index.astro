@@ -31,40 +31,56 @@ import { Button } from "@/components/ui/button"
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
+		<div class="wrapper">
+			<Header />
 			<video id="backgroundImage" autoplay loop>
 				<source src="/src/assets/bkvideo.mp4" type="video/mp4">
 			</video>
-			<div class="content">
-				<table>
-					<tr>
-					<th>
-						<main>
-						<h1>🐎 Bem vindo, Mustangueiro!</h1>
-						<h2 class="divider line one-line" contenteditable><img src="/src/assets/logo_no_bk.png" width="70px"></h2>
-						<p>
-							Bem-vindo ao centro da paixão pelos Mustangs no Norte de Portugal! 
-						</p>
-						<h2 class="divider line one-line" contenteditable><img src="/src/assets/logo_no_bk.png" width="70px"></h2>
-						<p>
-							Somos uma comunidade vibrante de aficionados por um dos ícones mais emblemáticos do mundo automobilístico: o Ford Mustang. Desde o ronco inconfundível do motor até às linhas clássicas que definem seu design, cada detalhe dos Mustangs desperta uma paixão que decidimos celebrar juntos.
-						</p>
-						<h2 class="divider line one-line" contenteditable><img src="/src/assets/logo_no_bk.png" width="70px"></h2>
-						<Button>Saber mais</Button>
-						</main>
-					</th>
-					</tr>
-				</table>
+			<div class="content-wrapper">
+				<div class="content">
+					<table>
+						<tr>
+							<th>
+								<main>
+									<h1>🐎 Bem-vindo, Mustangueiro!</h1>
+									<h2 class="divider line one-line" contenteditable><img src="/src/assets/logo_no_bk.png" width="70px"></h2>
+									<p>
+										Bem-vindo ao centro da paixão pelos Mustangs no Norte de Portugal! 
+									</p>
+									<h2 class="divider line one-line" contenteditable><img src="/src/assets/logo_no_bk.png" width="70px"></h2>
+									<Button>Saber mais</Button>
+								</main>
+							</th>
+						</tr>
+					</table>
+				</div>
+				<Footer />
 			</div>
-		<Footer />
+		</div>
 	</body>
 </html>
 
 
 <style>
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	.content-wrapper {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.content {
+		flex: 1;
+	}
 	main {
 		text-align: center;
 		text-justify: inter-word;
+		height: auto;
 	}
 	h1, p {
 		margin: 5%;
@@ -88,7 +104,6 @@ import { Button } from "@/components/ui/button"
 			flex: 1;
 		}
 	}
-
 	.line {
 		align-items: center;
 		margin: 1em -1em;
@@ -99,11 +114,13 @@ import { Button } from "@/components/ui/button"
 			margin: 0 1em;
 		}
 	}
-
-  .one-line {
-    &:before,
-    &:after {
-      background: black;
-    }
-  }
+  	.one-line {
+		&:before,
+		&:after {
+			background: black;
+		}
+	}
+	footer {
+		margin-top: auto;
+	}
 </style>

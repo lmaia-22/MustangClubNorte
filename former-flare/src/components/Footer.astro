@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <footer>
-	&copy; {today.getFullYear()} mustangclubedonorte. All rights reserved.
+	&copy; {today.getFullYear()} mustangclubedonorte. Todos os direitos reservados.
 	<div class="social-links">
     <a href="https://www.instagram.com/mustanglubedonorte" target="_blank">
       <Icon name="ri--instagram-fill">
@@ -19,16 +19,18 @@ import { Icon } from 'astro-icon/components'
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
+		padding: 2em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+		width: 100%;
+		margin-top: auto;
 	}
 	.social-links {
 		display: flex;
 		justify-content: center;
-    gap: 1em;
-    font-size: 140%;
+		gap: 1em;
+		font-size: 140%;
 		margin-top: 1em;
 	}
 	.social-links a {
