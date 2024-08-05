@@ -9,7 +9,22 @@ const team = [
 	{ src: '/src/assets/team/team-4.jpg', alt: 'Team 4' },
   ];
 ---
-
+<style>
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	th, td {
+		text-align: center;
+	}
+	img {
+		width: 100%;
+		height: auto; /* Set a fixed max-width */
+		transition: box-shadow 0.2s ease;
+		display: block;
+		margin: 0 auto; /* Center image */
+	}
+</style>
 <Layout
 	title="Administração"
 	description="A equipa"
@@ -22,7 +37,7 @@ const team = [
 		{team.map((data) => (
 		<th>
 			<Card>
-				<CardContent className="flex aspect-square items-center justify-center p-6">
+				<CardContent className="flex items-center justify-center p-6">
 					<img src={data.src} alt={data.alt} class="w-full h-full object-cover" /> 
 				</CardContent>
 			</Card>
