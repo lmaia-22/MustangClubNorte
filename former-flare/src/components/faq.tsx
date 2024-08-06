@@ -59,7 +59,7 @@ import {
     return (
       <Accordion type="single" collapsible className="w-full mt-3">
         {accordionItems.map((item) => (
-          <AccordionItem className="border mb-4 rounded-lg" key={item.value} value={item.value}>
+          <AccordionItem className="bg-primary mb-4 rounded-lg" key={item.value} value={item.value}>
             <AccordionTrigger className="flex justify-between items-center w-full p-4 bg-gray-100 font-bold hover:bg-gray-200 transition-colors">{item.trigger}</AccordionTrigger>
             <AccordionContent className="p-4 bg-white">{item.content}</AccordionContent>
           </AccordionItem>
