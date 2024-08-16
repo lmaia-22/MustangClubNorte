@@ -46,7 +46,7 @@ export default function Page() {
       </section>
       <section id="video">
         <video autoPlay>
-          <source src="mustang.mp4" type="video/mp4"/>
+          <source src="/mustang.mp4" type="video/mp4"/>
         </video>
       </section>  
       <section id="about">
