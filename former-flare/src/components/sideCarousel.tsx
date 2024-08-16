@@ -46,7 +46,7 @@ export function InteractiveCarousel({nImages, startImage}: InteractiveCarouselPr
             opts={{
                 align: "center",
                 containScroll: "trimSnaps",
-                slidesToScroll: 1,
+                slidesToScroll: 10,
                 axis: "y",
                 loop: true,
             }}

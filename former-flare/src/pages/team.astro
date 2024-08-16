@@ -31,13 +31,15 @@ const team = [
 	pubDate={new Date('August 08 2024')}
 	heroImage="/src/assets/logo.jpeg"
 >
-
+<div>
+	<p>Somos 4 administradores cada um com a sua responsabilidade e em conjunto tomamos as melhores decisoes para o clube e todos os seus membros.</p>
+</div>
 <table>
 	<tr>
 		{team.map((data) => (
 		<th>
 			<Card>
-				<CardContent className="flex items-center justify-center p-6">
+				<CardContent className="flex aspect-square items-center justify-center p-6">
 					<img src={data.src} alt={data.alt} class="w-full h-full object-cover" /> 
 				</CardContent>
 			</Card>

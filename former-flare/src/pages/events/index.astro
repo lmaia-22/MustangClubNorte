@@ -8,7 +8,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import '@/styles/globals.css'
 
 // Sort posts by the most recent publication date
-const posts = (await getCollection('blog')).sort(
+const events = (await getCollection('events')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
@@ -22,18 +22,18 @@ const posts = (await getCollection('blog')).sort(
 				width: 100%;
 				margin-top: 2rem;
 			}
+			tr {
+				margin-top: 2rem;
+			}
 			th, td {
 				text-align: center;
 			}
 			img {
-				width: 100%;
-				max-height: 300px; /* Set a fixed max-width */
-				height: auto; /* Maintain aspect ratio */
+				max-height: 300px;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
 				transition: box-shadow 0.2s ease;
 				display: block;
-				margin: 0 auto; /* Center image */
 			}
 			.title {
 				margin: 0;
@@ -68,24 +68,26 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<section>
+				<h1>Os nossos Eventos Passados</h1>
 				<table>
 					<tbody>
+						<tr>
 						{
-							posts.map((post) => (
+							events.map((event) => (
 								<tr>
 									<td>
-										<a href={`/blog/${post.slug}/`}>
-											<img src={post.data.heroImage} alt="" />
+										<a href={`/events/${event.slug}/`}>
+											<img src={event.data.heroImage} alt="" />
 										</a>
 									</td>
 									<td>
-										<a href={`/blog/${post.slug}/`}>
-											<h4 class="title">{post.data.title}</h4>
+										<a href={`/events/${event.slug}/`}>
+											<h4 class="title">{event.data.title}</h4>
 										</a>
 									</td>
 									<td>
 										<p class="date">
-											<FormattedDate date={post.data.pubDate} />
+											<FormattedDate date={event.data.pubDate} />
 										</p>
 									</td>
 								</tr>
