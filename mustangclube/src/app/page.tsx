@@ -177,8 +177,9 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-wrap items-center justify-center mx-auto gap-4">
             {DATA.team.map((team, id) => (
-              <BlurFade delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <BlurFade key="id" delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                   <TeamMemberCard
+                    key={id}
                     name={team.name}
                     role={team.role}
                     picture={team.image}
@@ -198,7 +199,7 @@ export default function Page() {
                   Portfolio
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Espreitem as nossas melhores "chapas"!
+                  Espreitem as nossas melhores &apos;chapas&apos;!
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   As fotografias dos passeos e eventos tiradas pelo fotografio do Clube e também alguns membros.

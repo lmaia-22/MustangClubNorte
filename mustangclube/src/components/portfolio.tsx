@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
-
+import Image from 'next/image'
+ 
 const reviews = [
   {
     img: "/portfolio/portfolio-1.jpg",
@@ -102,7 +103,7 @@ const ReviewCard = ({ img }: { img: string }) => {
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
     >
-      <img className="object-cover w-full h-full" alt="" src={img} />
+      <Image alt="Portfolio" src={img} />
     </figure>
   );
 };
