@@ -94,7 +94,7 @@ export default function ContactForm() {
         }}
       >
         <Button type="submit" 
-        className="w-full bg-background text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
         > Submit</Button>
       </CoolMode>
     </form>
