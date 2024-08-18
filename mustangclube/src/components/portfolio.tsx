@@ -96,14 +96,14 @@ const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "relative w-32 h-32 cursor-pointer overflow-hidden rounded-lg border",
+        "relative w-34 h-32 cursor-pointer overflow-hidden rounded-lg border",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
     >
-      <Image alt="Portfolio" src={img} />
+      <Image alt="Portfolio" src={img} width={200} height={300}/>
     </figure>
   );
 };

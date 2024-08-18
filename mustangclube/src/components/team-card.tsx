@@ -27,7 +27,7 @@ export function TeamMemberCard({
   return (
     <Card className={cn("flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full", className)}>
       <div className="flex flex-col items-center justify-center p-4">
-        <Image src={picture} alt={name} width={150} height={150} className="rounded-full object-cover object-center" />
+        <Image src={picture} alt={name} width={150} height={150} className="object-cover object-center" />
         <CardHeader className="text-center mt-4">
           <CardTitle className="text-lg font-semibold">{name}</CardTitle>
           <p className="text-sm text-muted-foreground">{role}</p>
