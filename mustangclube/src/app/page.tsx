@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 import { MarqueeDemo } from "@/components/portfolio";
-import ContactForm from "@/components/form";
+import { ProfileForm } from "@/components/contact";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -282,7 +282,7 @@ export default function Page() {
                   Quer entrar para o clube?{" "}
                   Quer fazer alguma parceria? Quer saber mais sobre o Clube?
                 </p>
-                <ContactForm />
+                <ProfileForm />
               </div>
             </BlurFade>
           </div>

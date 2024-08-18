@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import Image from 'next/image'
+import { BorderBeam } from "./magicui/border-beam";
  
 const reviews = [
   {
@@ -111,6 +112,7 @@ const ReviewCard = ({ img }: { img: string }) => {
 export function MarqueeDemo() {
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <BorderBeam />
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review, index) => (
           <ReviewCard key={index} img={review.img} />
