@@ -10,7 +10,7 @@ export default function FullScreenVideo() {
       {/* Video Background */}
       <video
         className="absolute top-0 left-0 h-full w-full object-cover"
-        src="/mustang.mp4"
+        src="https://drive.google.com/uc?export=download&id=1T_tSXWcU1FCPRVYSBYHbiBy0rUW2GbKd"
         autoPlay
         loop
       />
