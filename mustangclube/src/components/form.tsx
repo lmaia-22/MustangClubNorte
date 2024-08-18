@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { pathToFileURL } from 'url';
+import { Button } from './ui/button';
+import { CoolMode } from './magicui/cool-mode';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -85,12 +87,16 @@ export default function ContactForm() {
           className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
-      <button
-        type="submit"
-        className="w-full bg-background text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      <CoolMode
+        options={{
+          particle:
+            "/logo_no_bk.png",
+        }}
       >
-        Submit
-      </button>
+        <Button type="submit" 
+        className="w-full bg-background text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        > Submit</Button>
+      </CoolMode>
     </form>
   );
 }
