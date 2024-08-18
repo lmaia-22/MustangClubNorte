@@ -42,7 +42,7 @@ export default function ContactForm() {
           value={formData.nome}
           onChange={handleChange}
           required
-          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:text-gray-200"
         />
       </div>
       <div className="mb-4">
@@ -53,7 +53,7 @@ export default function ContactForm() {
           value={formData.matricula}
           onChange={handleChange}
           required
-          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:text-gray-200"
         />
       </div>
       <div className="mb-4">
@@ -63,7 +63,7 @@ export default function ContactForm() {
           name="foto"
           accept="image/*"
           onChange={handleChange}
-          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:text-gray-200"
         />
       </div>
       <div className="mb-4">
@@ -74,7 +74,7 @@ export default function ContactForm() {
           value={formData.cidade}
           onChange={handleChange}
           required
-          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:text-gray-200"
         />
       </div>
       <div className="mb-4">
@@ -84,7 +84,7 @@ export default function ContactForm() {
           value={formData.mensagem}
           onChange={handleChange}
           required
-          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-background w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:text-gray-200"
         />
       </div>
       <CoolMode
@@ -94,7 +94,7 @@ export default function ContactForm() {
         }}
       >
         <Button type="submit" 
-        className="w-full font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:text-gray-200"
         > Submit</Button>
       </CoolMode>
     </form>

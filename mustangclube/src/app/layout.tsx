@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import FullScreenVideo from "@/components/video";
+import Footer from "@/components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -68,6 +69,7 @@ export default function RootLayout({
             {children}
             <Navbar />
           </TooltipProvider>
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>
