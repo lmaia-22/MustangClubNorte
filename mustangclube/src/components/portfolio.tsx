@@ -104,7 +104,7 @@ const ReviewCard = ({ img }: { img: string }) => {
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
     >
-      <Image alt="Portfolio" src={img} width={200} height={300}/>
+      <Image alt="Portfolio" src={img} width={200} height={300} className="w-full h-full object-cover object-center"/>
     </figure>
   );
 };

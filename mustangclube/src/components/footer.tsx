@@ -83,7 +83,7 @@ export default function footer(){
                             ))}
                     </div>
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Copyright © 2024 
-                    <a className="cursor-pointer" href="/">Mustang Clube do Norte</a>. All Rights Reserved.</span>
+                    <a className="cursor-pointer" href="/"> Mustang Clube do Norte</a>. All Rights Reserved.</span>
                 </div>
             </div>
         </footer>

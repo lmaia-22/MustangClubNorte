@@ -19,7 +19,8 @@ export const DATA = {
   mission1:"Unir entusiastas de Mustangs através de eventos e passeios.",
   mission2:"Proporcionar momentos de pura adrenalina e convívio.",
   mission3:"Oferecer uma plataforma para compartilhar conhecimentos e experiências.",
-    avatarUrl: "/logo_no_bk.png",
+  firstRenderUrl: "/bk.jpeg",
+  avatarUrl: "/logo_no_bk.png",
   skills: [
     "Viana Do Castelo",
     "Gondomar",

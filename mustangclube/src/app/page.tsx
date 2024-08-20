@@ -1,3 +1,5 @@
+"use client";
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -11,7 +13,7 @@ import Markdown from "react-markdown";
 import { MarqueeDemo } from "@/components/portfolio";
 import { ProfileForm } from "@/components/contact";
 
-const BLUR_FADE_DELAY = 0.04;
+const BLUR_FADE_DELAY = 1.00;
 
 export default function Page() {
   return (
@@ -141,7 +143,7 @@ export default function Page() {
             </BlurFade>
             <div className="flex flex-wrap gap-2 mx-auto">
               {DATA.skills.map((skill, id) => (
-                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                   <Badge key={skill}>{skill}</Badge>
                 </BlurFade>
               ))}
@@ -165,9 +167,9 @@ export default function Page() {
                 </div>
               </div>
             </BlurFade>
-            <div className="flex flex-wrap items-center justify-center mx-auto gap-4 mt-4">
+            <div className="flex flex-col-2  items-center justify-center mx-auto gap-4 mt-4">
               {DATA.team.map((team, id) => (
-                <BlurFade key="id" delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <BlurFade key={id+1} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                   <TeamMemberCard
                     key={id}
                     name={team.name}
